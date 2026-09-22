@@ -1,0 +1,450 @@
+{
+  "schemaVersion": 1,
+  "game": "clank-corner",
+  "version": "1.0.0",
+  "rulesVersion": "corner-1",
+  "config": {
+    "players": {
+      "A": {
+        "name": "Golden Alpha",
+        "role": "external",
+        "style": null
+      },
+      "B": {
+        "name": "Golden Beta",
+        "role": "external",
+        "style": null
+      }
+    },
+    "turnDeadlineMs": 60000
+  },
+  "actions": [
+    {
+      "leg": 1,
+      "turn": 1,
+      "actions": {
+        "A": {
+          "type": "heavy"
+        },
+        "B": {
+          "type": "heavy"
+        }
+      }
+    },
+    {
+      "leg": 1,
+      "turn": 2,
+      "actions": {
+        "A": {
+          "type": "recharge"
+        },
+        "B": {
+          "type": "recharge"
+        }
+      }
+    },
+    {
+      "leg": 1,
+      "turn": 3,
+      "actions": {
+        "A": {
+          "type": "feint"
+        },
+        "B": {
+          "type": "feint"
+        }
+      }
+    },
+    {
+      "leg": 1,
+      "turn": 4,
+      "actions": {
+        "A": {
+          "type": "recharge"
+        },
+        "B": {
+          "type": "recharge"
+        }
+      }
+    },
+    {
+      "leg": 1,
+      "turn": 5,
+      "actions": {
+        "A": {
+          "type": "feint"
+        },
+        "B": {
+          "type": "feint"
+        }
+      }
+    },
+    {
+      "leg": 1,
+      "turn": 6,
+      "actions": {
+        "A": {
+          "type": "recharge"
+        },
+        "B": {
+          "type": "recharge"
+        }
+      }
+    },
+    {
+      "leg": 1,
+      "turn": 7,
+      "actions": {
+        "A": {
+          "type": "feint"
+        },
+        "B": {
+          "type": "guard"
+        }
+      }
+    },
+    {
+      "leg": 1,
+      "turn": 8,
+      "actions": {
+        "A": {
+          "type": "guard"
+        },
+        "B": {
+          "type": "guard"
+        }
+      }
+    }
+  ],
+  "events": [
+    {
+      "leg": 1,
+      "turn": 1,
+      "actions": {
+        "A": {
+          "type": "heavy"
+        },
+        "B": {
+          "type": "heavy"
+        }
+      },
+      "damage": {
+        "A": 5,
+        "B": 5
+      },
+      "deltas": {
+        "A": {
+          "hp": -5,
+          "energy": -3
+        },
+        "B": {
+          "hp": -5,
+          "energy": -3
+        }
+      },
+      "after": {
+        "A": {
+          "hp": 7,
+          "energy": 0
+        },
+        "B": {
+          "hp": 7,
+          "energy": 0
+        }
+      },
+      "result": null
+    },
+    {
+      "leg": 1,
+      "turn": 2,
+      "actions": {
+        "A": {
+          "type": "recharge"
+        },
+        "B": {
+          "type": "recharge"
+        }
+      },
+      "damage": {
+        "A": 0,
+        "B": 0
+      },
+      "deltas": {
+        "A": {
+          "hp": 0,
+          "energy": 2
+        },
+        "B": {
+          "hp": 0,
+          "energy": 2
+        }
+      },
+      "after": {
+        "A": {
+          "hp": 7,
+          "energy": 2
+        },
+        "B": {
+          "hp": 7,
+          "energy": 2
+        }
+      },
+      "result": null
+    },
+    {
+      "leg": 1,
+      "turn": 3,
+      "actions": {
+        "A": {
+          "type": "feint"
+        },
+        "B": {
+          "type": "feint"
+        }
+      },
+      "damage": {
+        "A": 2,
+        "B": 2
+      },
+      "deltas": {
+        "A": {
+          "hp": -2,
+          "energy": -2
+        },
+        "B": {
+          "hp": -2,
+          "energy": -2
+        }
+      },
+      "after": {
+        "A": {
+          "hp": 5,
+          "energy": 0
+        },
+        "B": {
+          "hp": 5,
+          "energy": 0
+        }
+      },
+      "result": null
+    },
+    {
+      "leg": 1,
+      "turn": 4,
+      "actions": {
+        "A": {
+          "type": "recharge"
+        },
+        "B": {
+          "type": "recharge"
+        }
+      },
+      "damage": {
+        "A": 0,
+        "B": 0
+      },
+      "deltas": {
+        "A": {
+          "hp": 0,
+          "energy": 2
+        },
+        "B": {
+          "hp": 0,
+          "energy": 2
+        }
+      },
+      "after": {
+        "A": {
+          "hp": 5,
+          "energy": 2
+        },
+        "B": {
+          "hp": 5,
+          "energy": 2
+        }
+      },
+      "result": null
+    },
+    {
+      "leg": 1,
+      "turn": 5,
+      "actions": {
+        "A": {
+          "type": "feint"
+        },
+        "B": {
+          "type": "feint"
+        }
+      },
+      "damage": {
+        "A": 2,
+        "B": 2
+      },
+      "deltas": {
+        "A": {
+          "hp": -2,
+          "energy": -2
+        },
+        "B": {
+          "hp": -2,
+          "energy": -2
+        }
+      },
+      "after": {
+        "A": {
+          "hp": 3,
+          "energy": 0
+        },
+        "B": {
+          "hp": 3,
+          "energy": 0
+        }
+      },
+      "result": null
+    },
+    {
+      "leg": 1,
+      "turn": 6,
+      "actions": {
+        "A": {
+          "type": "recharge"
+        },
+        "B": {
+          "type": "recharge"
+        }
+      },
+      "damage": {
+        "A": 0,
+        "B": 0
+      },
+      "deltas": {
+        "A": {
+          "hp": 0,
+          "energy": 2
+        },
+        "B": {
+          "hp": 0,
+          "energy": 2
+        }
+      },
+      "after": {
+        "A": {
+          "hp": 3,
+          "energy": 2
+        },
+        "B": {
+          "hp": 3,
+          "energy": 2
+        }
+      },
+      "result": null
+    },
+    {
+      "leg": 1,
+      "turn": 7,
+      "actions": {
+        "A": {
+          "type": "feint"
+        },
+        "B": {
+          "type": "guard"
+        }
+      },
+      "damage": {
+        "A": 2,
+        "B": 0
+      },
+      "deltas": {
+        "A": {
+          "hp": 0,
+          "energy": -2
+        },
+        "B": {
+          "hp": -2,
+          "energy": 0
+        }
+      },
+      "after": {
+        "A": {
+          "hp": 3,
+          "energy": 0
+        },
+        "B": {
+          "hp": 1,
+          "energy": 2
+        }
+      },
+      "result": null
+    },
+    {
+      "leg": 1,
+      "turn": 8,
+      "actions": {
+        "A": {
+          "type": "guard"
+        },
+        "B": {
+          "type": "guard"
+        }
+      },
+      "damage": {
+        "A": 0,
+        "B": 0
+      },
+      "deltas": {
+        "A": {
+          "hp": 0,
+          "energy": 0
+        },
+        "B": {
+          "hp": 0,
+          "energy": 0
+        }
+      },
+      "after": {
+        "A": {
+          "hp": 3,
+          "energy": 0
+        },
+        "B": {
+          "hp": 1,
+          "energy": 2
+        }
+      },
+      "result": {
+        "status": "completed",
+        "winner": "A",
+        "reason": "points",
+        "finalTurn": 8
+      }
+    }
+  ],
+  "result": {
+    "status": "completed",
+    "winner": "A",
+    "reason": "points",
+    "finalTurn": 8
+  },
+  "finalState": {
+    "leg": 1,
+    "turn": 8,
+    "status": "completed",
+    "fighters": {
+      "A": {
+        "hp": 3,
+        "energy": 0
+      },
+      "B": {
+        "hp": 1,
+        "energy": 2
+      }
+    },
+    "result": {
+      "status": "completed",
+      "winner": "A",
+      "reason": "points",
+      "finalTurn": 8
+    }
+  },
+  "hash": "f5c3cc96cc5bb8148bbe2ec92e5a6b4d19245909403905f20b8b631cbf07cfe1"
+}

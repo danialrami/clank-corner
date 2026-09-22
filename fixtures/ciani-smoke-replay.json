@@ -1,0 +1,401 @@
+{
+  "schemaVersion": 1,
+  "game": "clank-corner",
+  "version": "1.0.0",
+  "rulesVersion": "corner-1",
+  "config": {
+    "players": {
+      "A": {
+        "name": "Ciani smoke",
+        "role": "external",
+        "style": null
+      },
+      "B": {
+        "name": "Scripted reactive",
+        "role": "bot",
+        "style": "reactive"
+      }
+    },
+    "turnDeadlineMs": 300000
+  },
+  "actions": [
+    {
+      "leg": 1,
+      "turn": 1,
+      "actions": {
+        "A": {
+          "type": "counter"
+        },
+        "B": {
+          "type": "jab"
+        }
+      }
+    },
+    {
+      "leg": 1,
+      "turn": 2,
+      "actions": {
+        "A": {
+          "type": "recharge"
+        },
+        "B": {
+          "type": "feint"
+        }
+      }
+    },
+    {
+      "leg": 1,
+      "turn": 3,
+      "actions": {
+        "A": {
+          "type": "heavy"
+        },
+        "B": {
+          "type": "recharge"
+        }
+      }
+    },
+    {
+      "leg": 1,
+      "turn": 4,
+      "actions": {
+        "A": {
+          "type": "recharge"
+        },
+        "B": {
+          "type": "counter"
+        }
+      }
+    },
+    {
+      "leg": 1,
+      "turn": 5,
+      "actions": {
+        "A": {
+          "type": "jab"
+        },
+        "B": {
+          "type": "recharge"
+        }
+      }
+    },
+    {
+      "leg": 1,
+      "turn": 6,
+      "actions": {
+        "A": {
+          "type": "guard"
+        },
+        "B": {
+          "type": "counter"
+        }
+      }
+    },
+    {
+      "leg": 1,
+      "turn": 7,
+      "actions": {
+        "A": {
+          "type": "jab"
+        },
+        "B": {
+          "type": "recharge"
+        }
+      }
+    }
+  ],
+  "events": [
+    {
+      "leg": 1,
+      "turn": 1,
+      "actions": {
+        "A": {
+          "type": "counter"
+        },
+        "B": {
+          "type": "jab"
+        }
+      },
+      "damage": {
+        "A": 4,
+        "B": 0
+      },
+      "deltas": {
+        "A": {
+          "hp": 0,
+          "energy": -2
+        },
+        "B": {
+          "hp": -4,
+          "energy": -1
+        }
+      },
+      "after": {
+        "A": {
+          "hp": 12,
+          "energy": 1
+        },
+        "B": {
+          "hp": 8,
+          "energy": 2
+        }
+      },
+      "result": null
+    },
+    {
+      "leg": 1,
+      "turn": 2,
+      "actions": {
+        "A": {
+          "type": "recharge"
+        },
+        "B": {
+          "type": "feint"
+        }
+      },
+      "damage": {
+        "A": 0,
+        "B": 2
+      },
+      "deltas": {
+        "A": {
+          "hp": -2,
+          "energy": 2
+        },
+        "B": {
+          "hp": 0,
+          "energy": -2
+        }
+      },
+      "after": {
+        "A": {
+          "hp": 10,
+          "energy": 3
+        },
+        "B": {
+          "hp": 8,
+          "energy": 0
+        }
+      },
+      "result": null
+    },
+    {
+      "leg": 1,
+      "turn": 3,
+      "actions": {
+        "A": {
+          "type": "heavy"
+        },
+        "B": {
+          "type": "recharge"
+        }
+      },
+      "damage": {
+        "A": 5,
+        "B": 0
+      },
+      "deltas": {
+        "A": {
+          "hp": 0,
+          "energy": -3
+        },
+        "B": {
+          "hp": -5,
+          "energy": 2
+        }
+      },
+      "after": {
+        "A": {
+          "hp": 10,
+          "energy": 0
+        },
+        "B": {
+          "hp": 3,
+          "energy": 2
+        }
+      },
+      "result": null
+    },
+    {
+      "leg": 1,
+      "turn": 4,
+      "actions": {
+        "A": {
+          "type": "recharge"
+        },
+        "B": {
+          "type": "counter"
+        }
+      },
+      "damage": {
+        "A": 0,
+        "B": 0
+      },
+      "deltas": {
+        "A": {
+          "hp": 0,
+          "energy": 2
+        },
+        "B": {
+          "hp": 0,
+          "energy": -2
+        }
+      },
+      "after": {
+        "A": {
+          "hp": 10,
+          "energy": 2
+        },
+        "B": {
+          "hp": 3,
+          "energy": 0
+        }
+      },
+      "result": null
+    },
+    {
+      "leg": 1,
+      "turn": 5,
+      "actions": {
+        "A": {
+          "type": "jab"
+        },
+        "B": {
+          "type": "recharge"
+        }
+      },
+      "damage": {
+        "A": 2,
+        "B": 0
+      },
+      "deltas": {
+        "A": {
+          "hp": 0,
+          "energy": -1
+        },
+        "B": {
+          "hp": -2,
+          "energy": 2
+        }
+      },
+      "after": {
+        "A": {
+          "hp": 10,
+          "energy": 1
+        },
+        "B": {
+          "hp": 1,
+          "energy": 2
+        }
+      },
+      "result": null
+    },
+    {
+      "leg": 1,
+      "turn": 6,
+      "actions": {
+        "A": {
+          "type": "guard"
+        },
+        "B": {
+          "type": "counter"
+        }
+      },
+      "damage": {
+        "A": 0,
+        "B": 0
+      },
+      "deltas": {
+        "A": {
+          "hp": 0,
+          "energy": 0
+        },
+        "B": {
+          "hp": 0,
+          "energy": -2
+        }
+      },
+      "after": {
+        "A": {
+          "hp": 10,
+          "energy": 1
+        },
+        "B": {
+          "hp": 1,
+          "energy": 0
+        }
+      },
+      "result": null
+    },
+    {
+      "leg": 1,
+      "turn": 7,
+      "actions": {
+        "A": {
+          "type": "jab"
+        },
+        "B": {
+          "type": "recharge"
+        }
+      },
+      "damage": {
+        "A": 2,
+        "B": 0
+      },
+      "deltas": {
+        "A": {
+          "hp": 0,
+          "energy": -1
+        },
+        "B": {
+          "hp": -1,
+          "energy": 2
+        }
+      },
+      "after": {
+        "A": {
+          "hp": 10,
+          "energy": 0
+        },
+        "B": {
+          "hp": 0,
+          "energy": 2
+        }
+      },
+      "result": {
+        "status": "completed",
+        "winner": "A",
+        "reason": "knockout",
+        "finalTurn": 7
+      }
+    }
+  ],
+  "result": {
+    "status": "completed",
+    "winner": "A",
+    "reason": "knockout",
+    "finalTurn": 7
+  },
+  "finalState": {
+    "leg": 1,
+    "turn": 7,
+    "status": "completed",
+    "fighters": {
+      "A": {
+        "hp": 10,
+        "energy": 0
+      },
+      "B": {
+        "hp": 0,
+        "energy": 2
+      }
+    },
+    "result": {
+      "status": "completed",
+      "winner": "A",
+      "reason": "knockout",
+      "finalTurn": 7
+    }
+  },
+  "hash": "79f1a7d531a97e8ffbe5ec9c8430995633b191d64cc9a687f6eb4ebe2a6db61f"
+}

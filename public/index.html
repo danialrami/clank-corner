@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Clank Corner</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="masthead">
+    <p class="eyebrow">LAN-first · rules corner-1</p>
+    <h1>CLANK<br><span>CORNER</span></h1>
+    <p class="tagline">Coach a fighter. Seal a move. Read the hit. Rematch.</p>
+  </header>
+
+  <main>
+    <section id="setup" class="card setup-card" aria-labelledby="setup-title">
+      <div>
+        <p class="round-label">Set the corner</p>
+        <h2 id="setup-title">Practice bout</h2>
+        <p class="muted">You control the left fighter. The right fighter uses a deterministic scripted style—never a model.</p>
+      </div>
+      <div class="setup-grid">
+        <label>Fighter name
+          <input id="fighter-name" maxlength="40" value="Clatter" autocomplete="off">
+        </label>
+        <label>Opponent style
+          <select id="opponent-style">
+            <option value="aggressive">Aggressive — power first</option>
+            <option value="cautious">Cautious — defend and charge</option>
+            <option value="reactive">Reactive — answer the last move</option>
+          </select>
+        </label>
+        <label class="wide">External-seat coach note
+          <textarea id="coach-note" maxlength="1000" rows="3" placeholder="Delivered in your authenticated observation"></textarea>
+          <small>This note is delivered to your external-seat observation. It is not an instruction to the built-in bot.</small>
+        </label>
+      </div>
+      <button id="create-bout" class="primary">Enter the ring</button>
+    </section>
+
+    <section class="card" aria-labelledby="watch-title">
+      <h2 id="watch-title">Watch an agent bout</h2>
+      <p class="muted">Paste a match ID from the CLI. Spectators need no capability token and cannot submit moves.</p>
+      <label>Match ID <input id="watch-id" maxlength="36" autocomplete="off"></label>
+      <button id="watch-bout">Watch live</button>
+    </section>
+
+    <section id="arena" class="arena" hidden aria-live="polite">
+      <div class="scoreline">
+        <span id="match-state" class="state-pill">Active</span>
+        <strong id="turn-label">Turn 1 / 8</strong>
+        <span id="pending-label">Waiting for your sealed move</span>
+      </div>
+      <div class="fighters">
+        <article class="fighter fighter-a">
+          <p id="seat-a-label" class="seat">A · Your fighter</p>
+          <h2 id="name-a">Clatter</h2>
+          <div class="meter-row"><span>HP</span><strong id="hp-a">12</strong><progress id="hpbar-a" max="12" value="12"></progress></div>
+          <div class="meter-row energy"><span>EN</span><strong id="energy-a">3</strong><progress id="enbar-a" max="6" value="3"></progress></div>
+        </article>
+        <div class="versus" aria-hidden="true">VS</div>
+        <article class="fighter fighter-b">
+          <p id="seat-b-label" class="seat">B · Scripted opponent</p>
+          <h2 id="name-b">Clank</h2>
+          <div class="meter-row"><span>HP</span><strong id="hp-b">12</strong><progress id="hpbar-b" max="12" value="12"></progress></div>
+          <div class="meter-row energy"><span>EN</span><strong id="energy-b">3</strong><progress id="enbar-b" max="6" value="3"></progress></div>
+        </article>
+      </div>
+
+      <section class="move-panel" aria-labelledby="move-title">
+        <div>
+          <p class="round-label">Simultaneous turn</p>
+          <h2 id="move-title">Seal your move</h2>
+        </div>
+        <div id="moves" class="move-grid"></div>
+      </section>
+
+      <section class="event-card" aria-labelledby="event-title">
+        <p class="round-label">Last exchange</p>
+        <h2 id="event-title">The bell is ready.</h2>
+        <p id="event-detail" class="muted">Moves stay hidden until both seats submit.</p>
+      </section>
+
+      <div id="terminal-tools" class="terminal-tools" hidden>
+        <button id="inspect-replay" class="primary">Inspect replay</button>
+        <button id="download-replay">Export replay</button>
+        <button id="rematch">Rematch with current setup</button>
+      </div>
+    </section>
+
+    <section id="replay-panel" class="card replay" hidden aria-labelledby="replay-title">
+      <div class="replay-heading">
+        <div>
+          <p class="round-label">Canonical replay</p>
+          <h2 id="replay-title">Step through the bout</h2>
+        </div>
+        <strong id="replay-step">Start · 0 / 0</strong>
+      </div>
+      <div class="replay-fighters">
+        <p><span id="replay-name-a">A</span> · HP <strong id="replay-hp-a">12</strong> · EN <strong id="replay-en-a">3</strong></p>
+        <p><span id="replay-name-b">B</span> · HP <strong id="replay-hp-b">12</strong> · EN <strong id="replay-en-b">3</strong></p>
+      </div>
+      <p id="replay-event">Before the first exchange.</p>
+      <div class="replay-controls">
+        <button id="replay-prev" aria-label="Previous replay step">← Previous</button>
+        <input id="replay-range" type="range" min="0" max="0" value="0" aria-label="Replay step">
+        <button id="replay-next" aria-label="Next replay step">Next →</button>
+      </div>
+      <p id="replay-verification" class="verified"></p>
+    </section>
+
+    <p id="error" class="error" role="alert" hidden></p>
+  </main>
+  <footer>Ephemeral local memory · export completed replays to keep them · no live model calls in practice</footer>
+  <script src="/app.js" defer></script>
+</body>
+</html>
