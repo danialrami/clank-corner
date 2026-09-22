@@ -1,0 +1,31 @@
+{
+  "name": "clank-corner",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A small LAN-first simultaneous-turn coaching game",
+  "type": "module",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "24.14.1"
+  },
+  "bin": {
+    "clank-corner": "dist/src/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "start": "node dist/src/cli.js serve",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "test:e2e": "npm run build && node test/browser.mjs",
+    "verify": "npm run typecheck && npm run build && node --test dist/test/*.test.js && node dist/src/cli.js verify fixtures/golden-replay.json --json"
+  },
+  "dependencies": {
+    "fastify": "5.12.5"
+  },
+  "devDependencies": {
+    "@sparticuz/chromium": "153.0.0",
+    "@types/node": "24.10.1",
+    "playwright": "1.63.0",
+    "typescript": "7.0.2"
+  }
+}
